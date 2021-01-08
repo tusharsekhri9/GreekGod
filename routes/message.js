@@ -12,7 +12,6 @@ router.post("/",(req,res,next) => {
     console.log("req received", req);
     console.log("name ", req.body.name);
     console.log("email ", req.body.email);
-    console.log("content ", req.body.content);
 
     const new_message =  new Message({
          _id: new mongoose.Types.ObjectId(),
