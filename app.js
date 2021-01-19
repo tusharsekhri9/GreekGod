@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
  const message_routes = require('./routes/message.js');
  const user_routes = require('./routes/users.js');
 
-mongoose.connect('mongodb+srv://tsekhri:Testing@123@cluster0.ncyhw.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use('/message', message_routes);
 app.use('/users', user_routes);
